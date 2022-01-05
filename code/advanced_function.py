@@ -168,7 +168,7 @@ file.close()
 with open("basci.txt","w") as file:
     file.write("이를 스트림이라고 부릅니다.")
 # 텍스트 읽기: read()
-with open("info.txt", "r") as file:
+with open("../info.txt", "r") as file:
     contents = file.read()  # 파일을 읽고 출력
 print(contents)
 
@@ -177,7 +177,7 @@ import random   # 랜덤한 숫자를 만들기 위해 가져온다.
 
 hanguls = list("가나다라마바사아자차카타파하")    # 간단한 한글 리스트 생성
 
-with open("info.txt", "w") as file:
+with open("../info.txt", "w") as file:
     for i in range(1000):
         name = random.choice(hanguls) + random.choice(hanguls)
         weight = random.randrange(40, 100)
@@ -187,7 +187,7 @@ with open("info.txt", "w") as file:
 
 # 키와 몸무게로 bmi(비만도) 계산
 # 반복문으로 파일 한 줄씩 읽기
-with open("info.txt", "r") as file:
+with open("../info.txt", "r") as file:
     for line in file:
         # 변수 선언
         (name, weight, height) = line.strip().split(", ")
